@@ -41,12 +41,12 @@ const App3 = (user: any) => {
         className={` flex flex-col  relative overflow-hidden `}
       >
         <Navbar buttoncolor={buttoncolor} btn={btn1} social={social}
-          textcolor={textcolor}/>
-        <Header editedText={header} detailscolor={detailscolor} />
+          textcolor={textcolor} bgcolor={bgcolor}/>
+        <Header editedText={header} detailscolor={detailscolor} bgcolor={bgcolor}/>
         <div className="h-40" />
-        <About editedText={about} detailscolor={detailscolor} />
+        <About editedText={about} detailscolor={detailscolor} bgcolor={bgcolor} />
         <div className="h-40" />
-        <Service editedText={service} />
+        <Service editedText={service} bgcolor={bgcolor} detailscolor={detailscolor}/>
         <div className="h-40" />
         <Review editedText={review} />
         <div className="h-40" />
@@ -62,7 +62,8 @@ const App3 = (user: any) => {
 
 const Header = ({
   editedText,
-  detailscolor
+  detailscolor,
+  bgcolor
 }: any) => {
   const image = "./photo/header.webp"
   return (
@@ -76,7 +77,7 @@ const Header = ({
       }}
     >
       <div className=" max-w-screen-2xl mx-auto  h-screen sm:justify-center justify-end z-10 flex flex-col gap-2 w-full">
-      <div className="p-8 bg-white max-w-screen-md border-transparent bg-clip-padding border-[20px] flex flex-col ">
+      <div className="p-8 max-w-screen-md border-transparent bg-clip-padding border flex flex-col " style={{ borderColor: detailscolor, background:bgcolor }}>
         
         <p className="md:text-[1.5rem]">{editedText.titolo}</p>
         <h1 className="text-pretty font-semibold md:text-[2.5rem] text-[1.5rem]">{editedText.slogan}</h1>
@@ -87,7 +88,7 @@ const Header = ({
   );
 };
 
-const Service = ({ editedText }: any) => {
+const Service = ({ editedText, detailscolor, bgcolor }: any) => {
   return (
     <section
       id="servizi"
@@ -99,7 +100,7 @@ const Service = ({ editedText }: any) => {
           className="flex flex-col items-center w-full gap-2 p-2 "
         >
           <Servimg index={index} />
-          <div className="flex flex-col w-[90%] gap-2 p-3 text-center bg-white border z-10">
+          <div className="flex flex-col w-[90%] gap-2 p-3 text-center  border z-10"style={{ borderColor: detailscolor, background:bgcolor }}>
             <h3 className="font-bold">
               {service.nome}
             </h3>
@@ -128,6 +129,7 @@ const Servimg = ({ index }: any) => {
 
 const About = ({
   editedText,
+  bgcolor,
   detailscolor,
   image
 }: any) => {
@@ -143,7 +145,7 @@ const About = ({
           src={"./photo/about.webp"}
         />
       </div>
-      <div className="md:w-full flex flex-col justify-center p-4 gap-2 order-1 md:order-2 mr-auto w-3/4 ml-auto -mb-20 z-10 bg-white">
+      <div className="md:w-full border flex flex-col justify-center p-4 gap-2 order-1 md:order-2 mr-auto w-3/4 ml-auto -mb-20 z-10" style={{ borderColor: detailscolor, background:bgcolor }}>
         <h1 className="text-4xl">
           <p className="p-1">{editedText.title}</p>
         </h1>
