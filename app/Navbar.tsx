@@ -4,16 +4,17 @@ import React, { useState } from 'react';
 import { Social } from './Social';
 import Button from './Button';
 
-const Navbar = ({ buttoncolor, image, btn,social,textcolor }:any) => {
+const Navbar = ({ buttoncolor, image, btn,social,textcolor , bgcolor}:any) => {
   const [menu, setMenu] = useState(false);
   const handleMenu = () => {
     setMenu(!menu);
   };
 
   return (
-    <nav className="flex justify-between absolute top-0 w-full bg-white z-10 px-2 border-[20px]  border-transparent bg-clip-padding ">
+    <nav className={`flex max-w-screen-2xl justify-between absolute max-h-min inset-0 mx-auto px-4 border-transparent bg-transparent  bg-clip-padding  border-[20px]  w-full  z-[999]`}
+    style={{ backgroundColor: bgcolor }}>
       <div className="relative">
-        <img className="h-24 w-24 object-fit" alt="main" src={"./photo/navbar.png"} key={image} />
+        <img className="h-24 w-24 object-fit" alt="main" src={"./photo/navbar.webp"} key={image} />
       </div>
       <div className="flex gap-4 items-center ">
       <Button buttoncolor={buttoncolor} btn={btn} />
