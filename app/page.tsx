@@ -136,7 +136,7 @@ const About = ({
   return (
     <section
       id="aboutus"
-      className="max-w-screen-2xl mx-auto  flex flex-col md:flex-row items-center justify-center gap-8"
+      className="max-w-screen-2xl mx-auto  flex flex-col-reverse md:flex-row items-center justify-center gap-8"
     >
       <div className="w-full flex  relative order-2 md:order-1">
         <img
@@ -145,7 +145,7 @@ const About = ({
           src={"./photo/about.webp"}
         />
       </div>
-      <div className="md:w-full border flex flex-col justify-center p-4 gap-2 order-1 md:order-2 mr-auto w-3/4 ml-auto -mb-20 z-10" style={{ borderColor: detailscolor, background:bgcolor }}>
+      <div className="md:w-full border flex  md:-ml-20 flex-col -mt-20 md:mt-10 justify-center p-4 gap-2 order-1 md:order-2  w-3/4  -mb-20 z-10 " style={{ borderColor: detailscolor, background:bgcolor }}>
         <h1 className="text-4xl">
           <p className="p-1">{editedText.title}</p>
         </h1>
