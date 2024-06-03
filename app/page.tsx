@@ -92,7 +92,7 @@ const Service = ({ editedText, detailscolor, bgcolor }: any) => {
   return (
     <section
       id="servizi"
-      className="max-w-screen-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
+      className="max-w-screen-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-auto-fit"
     >
       {editedText.map((service: any, index: any) => (
         <div
