@@ -192,7 +192,7 @@ const Cta = ({ editedText, buttoncolor, btn }:any) => {
       className="my-20  flex flex-col items-center justify-center"
     >
       <div className="flex flex-col ">
-        <h1 className="max-w-screen-md text-center p-4 text-xl">{editedText}</h1>
+        <h1 className="max-w-screen-md text-center p-4 text-2xl">{editedText}</h1>
 
         <Button buttoncolor={buttoncolor} btn={btn} />
       </div>
