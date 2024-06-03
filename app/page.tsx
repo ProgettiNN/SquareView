@@ -97,7 +97,7 @@ const Service = ({ editedText, detailscolor, bgcolor }: any) => {
       {editedText.map((service: any, index: any) => (
         <div
           key={index}
-          className="flex flex-col items-center w-full gap-2 p-2 "
+          className="flex flex-col items-center w-full gap-2 p-2 h-full"
         >
           <Servimg index={index} />
           <div className="flex flex-col w-[90%] gap-2 p-3 text-center  border z-10"style={{ borderColor: detailscolor, background:bgcolor }}>
