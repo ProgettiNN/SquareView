@@ -11,7 +11,7 @@ const Navbar = ({ buttoncolor, image, btn,social,textcolor , bgcolor}:any) => {
   };
 
   return (
-    <nav className={`flex max-w-screen-2xl justify-between absolute max-h-min inset-0 mx-auto px-4 border-transparent bg-transparent  bg-clip-padding  border-[20px]  w-full  z-[999]`}
+    <nav className={`flex max-w-screen-2xl justify-between absolute top-5 left-0 right-0 mx-auto px-4 border-0 bg-transparent w-full z-[999] h-auto`}
     style={{ backgroundColor: bgcolor }}>
       <div className="relative">
         <img className="h-24 w-24 object-fit" alt="main" src={"./photo/navbar.webp"} key={image} />
